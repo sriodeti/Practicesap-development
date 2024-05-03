@@ -1,0 +1,41 @@
+<mvc:View xmlns:f="sap.f" controllerName="pos.pos.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+        <f:DynamicPage id="dpgId" toggleHeaderOnTitleClick="false">
+    <f:title>
+    <f:DynamicPageTitle id="dpt">
+    <f:heading><Title id="title" text="Product List"></Title></f:heading></f:DynamicPageTitle>
+</f:title>
+
+    <f:content>
+    <VBox id="box1" fitContainer="true">
+    <HBox alignContent="SpaceBetween">
+     
+    
+    <SearchField search=".onsearch"></SearchField>
+					<Button icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>
+                    <Button icon="" text="Go to Cart" type="Transparent"></Button>
+    </HBox>
+      
+    
+   <Table items="{/Products}"><columns><Column ><Text text="Product"></Text></Column>
+   <Column ><Text text="Price"></Text></Column>
+   <Column width="10rem"><Text text=""></Text></Column>
+   </columns>
+   <items >
+   <ColumnListItem >
+   <cells >
+   <ObjectIdentifier id="det" title="{ProductName}" text="{Id}"></ObjectIdentifier>
+   <ObjectNumber id="pr" number="{UnitPrice}" unit="USD">
+   </ObjectNumber>
+   <Button text="Add to cart" press=".onpress"/>
+   
+   </cells></ColumnListItem></items></Table>
+
+   </VBox>
+                    
+                    </f:content></f:DynamicPage>
+    </Page>
+</mvc:View>

@@ -1,0 +1,47 @@
+<mvc:View xmlns:ndc="sap.ndc" xmlns:form="sap.ui.layout.form" xmlns:m="sap.m"
+	controllerName="pos.pos.controller.Cart"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.commons"
+	xmlns:f="sap.ui.comp.smartform"
+	xmlns:obj="sap.uxap">
+
+	<obj:ObjectPageLayout
+		id="ObjectPageLayout"
+		headerTitle="Object Page Title"
+		headerContent="Object Page Header Content">
+
+		<obj:sections>
+			<obj:ObjectPageSection
+				title="Section Title">
+				<obj:subSections>
+					<obj:ObjectPageSubSection id="formcontent">
+					<!--<form:SimpleForm >
+					<m:Label text="Type of Leave"/>
+									<m:Text text="{TypeLeave}" visible="{editModel>/label}"/>
+									
+									
+					</form:SimpleForm>-->
+					<f:SmartForm 
+					>
+					<f:layout><f:ColumnLayout columnsL="3" columnsM="3" columnsXL="3"></f:ColumnLayout></f:layout>
+					<f:Group ><f:GroupElement ><f:elements><m:Text text="smooth"></m:Text></f:elements></f:GroupElement>
+					</f:Group>
+					<!--<f:Group ><f:GroupElement ><f:elements><u:Currency value="123" ></u:Currency></f:elements></f:GroupElement>
+					</f:Group>-->
+					</f:SmartForm>
+						
+							
+							
+
+
+						
+					</obj:ObjectPageSubSection>
+				</obj:subSections>
+			</obj:ObjectPageSection>
+		</obj:sections>
+
+	</obj:ObjectPageLayout>
+
+</mvc:View>
