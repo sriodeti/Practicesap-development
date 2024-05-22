@@ -31,9 +31,6 @@ oModel.read("/Products", {
                 var oRouter = new sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("Cart",{})
                
-                  
-                
-            console.log(oData);
             
                
         }
